@@ -108,7 +108,7 @@ public class Spell {
             Unit unitToHeal = tile.getUnitFromTile();
 
             if (unitToHeal.getIsPlayer()==1) {
-                if (unitToHeal.getHealth() == unitToHeal.getMaxHealth()){
+                if (unitToHeal.getHealth() >= unitToHeal.getMaxHealth()){
                     OtherClicked.clearCardClicked(out, gameState, gameState.player1);//clear highlighting
                     BasicCommands.addPlayer1Notification(out, "Health already full!", 2);
                     return;
